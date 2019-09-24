@@ -10,41 +10,43 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page1'),
+      home: MyHomePage(
+        title: "hellowworld",
+      ),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
+  MyHomePage({Key key, this.title}) : super(key: key);
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(44.0),
+        child: AppBar(
+          title: new Center(
+            child: Text(
+              '首页',
+              style: TextStyle(
+                color: Colors.black.withOpacity(0.8),
+              ),
+            ),
+          ),
+          backgroundColor: Colors.white,
+        ),
       ),
       body: Column(
         children: <Widget>[
           Text(
             'You have pushed the button this many times:',
             textAlign: TextAlign.center,
-          ),
-          Text(
-            '$_counter',
           ),
         ],
       ),
