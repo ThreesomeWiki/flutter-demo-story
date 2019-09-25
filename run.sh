@@ -1,1 +1,1 @@
-flutter run
+flutter run -d OVCQQSJ7AISCC6IF
