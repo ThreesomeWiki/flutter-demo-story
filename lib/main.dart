@@ -56,17 +56,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: <Widget>[
             Container(
-              padding: EdgeInsets.all(10.0),
-              margin: EdgeInsets.all(10.0),
+              height: 40,
               decoration: BoxDecoration(
-                color: Colors.yellow,
-                borderRadius: BorderRadius.circular(16.0),
+                color: Color(0XFF333333),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text("1"),
-                  Text("2"),
+                  Text('首页'),
+                  Text('分类'),
                 ],
               ),
             ),
