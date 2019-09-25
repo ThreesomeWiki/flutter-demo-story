@@ -44,9 +44,26 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: <Widget>[
+          Container(
+            height: 50.0,
+            padding: EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+              color: Colors.yellow,
+              borderRadius: BorderRadius.circular(16.0),
+            ),
+            child: Row(
+              children: <Widget>[
+                Text("1"),
+                Text("2"),
+              ],
+            ),
+          ),
           Text(
-            'You have pushed the button this many times:',
-            textAlign: TextAlign.center,
+            "3",
+            textDirection: TextDirection.ltr,
+            style: TextStyle(
+              color: Colors.red,
+            ),
           ),
         ],
       ),
