@@ -25,8 +25,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String activeNav = '首页';
   @override
   Widget build(BuildContext context) {
+    const navText = ['首页', '分类', '排行', '书架'];
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(44.0),
@@ -34,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Color(0XFFF5F5F5),
           elevation: 0,
           title: Container(
-            height: 44.0,
+            height: 44,
             decoration: BoxDecoration(),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -63,10 +65,32 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text('首页'),
-                  Text('分类'),
-                ],
+                children: navText
+                    .map(
+                      (v) => Container(
+                        width: 90,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: activeNav == v
+                              ? Color(0xff454545)
+                              : Color(0xff333333),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              v,
+                              style: TextStyle(
+                                  color: activeNav == v
+                                      ? Color(0xfff2f2f2)
+                                      : Color(0Xffa1a1a1)),
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
+                    .toList(),
               ),
             ),
           ],
