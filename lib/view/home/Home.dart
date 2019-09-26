@@ -4,6 +4,7 @@ import './components/HomeCategory.dart' as HomeCategory;
 import './components/HomeRecommend.dart' as HomeRecommend;
 import './components/HomeManRead.dart' as HomeManRead;
 import './components/HomeWomanRead.dart' as HomeWomanRead;
+import './components/HomeWuxia.dart' as HomeWuxia;
 
 class Home extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _Home extends State<Home> {
         // 分类
         HomeCategory.HomeCategory(),
         // 推荐列表
-        HomeRecommend.HomeRecommend(),
+        // HomeRecommend.HomeRecommend(),
         // banner
         Image.network(
           'https://static.zongheng.com/upload/recommend/current/2019/1568628679162.jpg',
@@ -29,9 +30,11 @@ class _Home extends State<Home> {
           height: 81.6,
         ),
         // 男生必读
-        HomeManRead.HomeManRead(),
+        // HomeManRead.HomeManRead(),
         // 女生爱看
-        HomeWomanRead.HomeWomanRead(),
+        // HomeWomanRead.HomeWomanRead(),
+        // 玄幻武侠
+        HomeWuxia.HomeWuxia(),
       ],
     );
   }

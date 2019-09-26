@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class HomeList extends StatefulWidget {
-  final Widget slotView;
-  final String title;
-  HomeList({this.slotView, this.title}) : super();
+  final Widget slotView; // 插入view
+  final String title; // title
+  final bool sanjiao; // 是否是三角形
+  HomeList({this.slotView, this.title, this.sanjiao = false}) : super();
   @override
   _HomeList createState() => _HomeList();
 }
@@ -19,12 +20,18 @@ class _HomeList extends State<HomeList> {
         children: [
           Row(
             children: <Widget>[
-              Container(
-                height: 18,
-                width: 5,
-                margin: EdgeInsets.only(right: 4),
-                decoration: BoxDecoration(color: Color(0xffe95e56)),
-              ),
+              !widget.sanjiao
+                  ? Container(
+                      height: 18,
+                      width: 5,
+                      margin: EdgeInsets.only(right: 4),
+                      decoration: BoxDecoration(color: Color(0xffe95e56)),
+                    )
+                  : Image.network(
+                      'http://familyweb.oss-cn-shanghai.aliyuncs.com/zongheng/icon/sanjiao-red.png',
+                      width: 15,
+                      height: 15,
+                    ),
               Text(
                 widget.title,
                 style: TextStyle(fontSize: 17, color: Color(0xff333333)),

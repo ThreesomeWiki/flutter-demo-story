@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeCard extends StatefulWidget {
+  static String pageName = '首页卡片';
   final int k;
   final Map v;
   HomeCard({this.k, this.v}) : super();
