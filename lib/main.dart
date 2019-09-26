@@ -152,10 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Text(
                           '免费专区',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                          ),
+                          style: TextStyle(color: Colors.white, fontSize: 12),
                         ),
                       ],
                     ),
@@ -178,10 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Text(
                           '女频精选',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                          ),
+                          style: TextStyle(color: Colors.white, fontSize: 12),
                         ),
                       ],
                     ),
@@ -189,6 +183,25 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+            Container(
+              margin: EdgeInsets.only(bottom: 10.4),
+              padding: EdgeInsets.only(top: 20.8, right: 18.75, left: 18.75),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        height: 18.6,
+                        width: 5,
+                        margin: EdgeInsets.only(right: 4),
+                        decoration: BoxDecoration(color: Color(0xffe95e56)),
+                      ),
+                      Text('编辑立荐'),
+                    ],
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
