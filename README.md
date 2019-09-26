@@ -19,5 +19,5 @@ flutter run
 ## Page
 
 <p>
-<image src='./md/home.jpeg' width=200/>
+<image src='./md/home.jpeg' width=200/> <image src='./md/home-2.jpeg' width=200/>
 </p>
