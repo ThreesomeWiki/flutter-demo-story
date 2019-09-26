@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './HomeList.dart' as HomeList;
 
 class HomeRecommend extends StatefulWidget {
   @override
@@ -6,8 +7,8 @@ class HomeRecommend extends StatefulWidget {
 }
 
 class _HomeRecommend extends State<HomeRecommend> {
-  @override
-  Widget build(BuildContext context) {
+  // 渲染列表
+  renderList() {
     List lists = [
       {
         'image':
@@ -34,135 +35,121 @@ class _HomeRecommend extends State<HomeRecommend> {
         'labs': ['都市生活', '连载'],
       },
     ];
-    return Container(
-      margin: EdgeInsets.only(bottom: 10),
-      padding: EdgeInsets.only(top: 20, right: 18, left: 18),
-      decoration: BoxDecoration(color: Colors.white),
-      child: Column(
-        children: [
-          // titles
-          Row(
-            children: <Widget>[
-              Container(
-                height: 18,
-                width: 5,
-                margin: EdgeInsets.only(right: 4),
-                decoration: BoxDecoration(color: Color(0xffe95e56)),
-              ),
-              Text(
-                '编辑立荐',
-                style: TextStyle(fontSize: 17, color: Color(0xff333333)),
-              ),
-            ],
-          ),
-          // list
-          ...lists.map(
-            (v) => Container(
-              padding: EdgeInsets.only(top: 20, bottom: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border(
-                  bottom: BorderSide(
-                    width: 1,
-                    color: Color(0xffe6e6e6),
-                  ),
+    return lists
+        .map(
+          (v) => Container(
+            padding: EdgeInsets.only(top: 20, bottom: 20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border(
+                bottom: BorderSide(
+                  width: 1,
+                  color: Color(0xffe6e6e6),
                 ),
               ),
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(right: 15),
-                    child: Image.network(v['image']),
-                    width: 65,
-                    height: 86,
-                  ),
-                  Container(
-                    height: 86,
-                    width: 244,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              v['title'],
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Color(0xff333333),
-                              ),
+            ),
+            child: Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(right: 15),
+                  child: Image.network(v['image']),
+                  width: 65,
+                  height: 86,
+                ),
+                Container(
+                  height: 86,
+                  width: 244,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            v['title'],
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Color(0xff333333),
                             ),
-                            Text(
-                              v['content'],
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 2,
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Color(0xff888888),
-                              ),
+                          ),
+                          Text(
+                            v['content'],
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Color(0xff888888),
                             ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Row(
-                              children: <Widget>[
-                                Text(
-                                  v['user'],
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                v['user'],
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Color(0xff888888),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                padding: EdgeInsets.only(left: 2, right: 2),
+                                decoration: BoxDecoration(
+                                  color: Color(0xffd1acd8),
+                                  borderRadius: BorderRadius.circular(3),
+                                ),
+                                child: Text(
+                                  '虚拟网络',
                                   style: TextStyle(
-                                    fontSize: 12,
-                                    color: Color(0xff888888),
+                                    fontSize: 13,
+                                    color: Colors.white,
                                   ),
                                 ),
-                              ],
-                            ),
-                            Row(
-                              children: <Widget>[
-                                Container(
-                                  padding: EdgeInsets.only(left: 2, right: 2),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffd1acd8),
-                                    borderRadius: BorderRadius.circular(3),
-                                  ),
-                                  child: Text(
-                                    '虚拟网络',
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      color: Colors.white,
-                                    ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 10),
+                                padding: EdgeInsets.only(left: 2, right: 2),
+                                decoration: BoxDecoration(
+                                  color: Color(0xffa1d0d2),
+                                  borderRadius: BorderRadius.circular(3),
+                                ),
+                                child: Text(
+                                  '连载',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: Colors.white,
                                   ),
                                 ),
-                                Container(
-                                  margin: EdgeInsets.only(left: 10),
-                                  padding: EdgeInsets.only(left: 2, right: 2),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffa1d0d2),
-                                    borderRadius: BorderRadius.circular(3),
-                                  ),
-                                  child: Text(
-                                    '连载',
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
-        ],
-      ),
-    );
+        )
+        .toList();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return HomeList.HomeList(
+        slotView: Column(
+          children: renderList(),
+        ),
+        title: '编辑立荐');
   }
 }
