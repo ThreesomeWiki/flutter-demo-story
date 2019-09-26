@@ -14,9 +14,18 @@ class _Home extends State<Home> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
+        // swiper
         HomeSwiper.HomeSwiper(),
+        // 分类
         HomeCategory.HomeCategory(),
+        // 推荐列表
         HomeRecommend.HomeRecommend(),
+        // banner
+        Image.network(
+          'https://static.zongheng.com/upload/recommend/current/2019/1568628679162.jpg',
+          width: 360,
+          height: 81.6,
+        ),
       ],
     );
   }
