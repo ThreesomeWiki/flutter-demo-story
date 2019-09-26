@@ -120,6 +120,31 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+            Container(
+              padding: EdgeInsets.only(top: 10, right: 5, bottom: 10, left: 5),
+              height: 60,
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(
+                    width: 1,
+                    color: Color(0xffe6e6e6),
+                  ),
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    width: 165,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Color(0xff7297c1),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
