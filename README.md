@@ -6,7 +6,9 @@ flutter run
 
 [纵横中文网](https://m.zongheng.com/h5/index?h5=1)
 
-## Diff
+## Study
+
+#### Diff
 
 -   RN,WEEX: 代码生成一个 Render Tree。把这个 Render Tree 通过 JS Bridge 传递给 Native,Native 通过渲染引擎渲染页面
 
@@ -14,7 +16,7 @@ flutter run
 
 Flutter 渲染引擎和 Android ,Chrome OS 渲染引擎一致。
 
-## Show
+## Page
 
 <p>
 <image src='./md/home.jpeg' width=200/>
