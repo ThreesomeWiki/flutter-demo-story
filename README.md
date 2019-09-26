@@ -15,3 +15,7 @@ flutter run
 Flutter 渲染引擎和 Android ,Chrome OS 渲染引擎一致。
 
 ## Show
+
+<p>
+<image src='./md/home.jpeg' width=200/>
+</p>
