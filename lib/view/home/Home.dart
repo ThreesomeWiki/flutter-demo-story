@@ -16,6 +16,8 @@ class Home extends StatefulWidget {
 
 class _Home extends State<Home> {
   static String pageName = '主页';
+
+  changeCategory() {}
   @override
   Widget build(BuildContext context) {
     return Column(

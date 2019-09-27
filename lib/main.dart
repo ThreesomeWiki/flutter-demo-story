@@ -19,6 +19,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String activeNav = '首页';
+  changeHandle() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +28,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: AppBar(
             backgroundColor: Color(0XFFF5F5F5),
             elevation: 0,
-            title: Header.Header(title: '纵横中文网')),
+            title: Header.Header(
+              title: '纵横中文网',
+              onChange: changeHandle,
+            )),
       ),
       body: SingleChildScrollView(
         child: Column(

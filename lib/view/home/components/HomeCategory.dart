@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeCategory extends StatefulWidget {
+  static String pageName = '分类';
   @override
   _HomeCategory createState() => _HomeCategory();
 }

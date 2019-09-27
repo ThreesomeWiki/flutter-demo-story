@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Header extends StatefulWidget {
+  static String pageName = '头部';
   final String title;
-  Header({this.title}) : super();
+  final Function onChange;
+  Header({this.title, this.onChange}) : super();
   @override
   _Header createState() => _Header();
 }
