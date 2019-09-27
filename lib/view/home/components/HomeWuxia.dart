@@ -4,6 +4,7 @@ import './HomeItem.dart' as HomeItem;
 import './HomeItemRow.dart' as HomeItemRow;
 
 class HomeWuxia extends StatefulWidget {
+  static String pageName = '武侠';
   @override
   _HomeWuxia createState() => _HomeWuxia();
 }
