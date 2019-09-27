@@ -3,6 +3,7 @@ import './components/Navs.dart' as Navs;
 import './components/Header.dart' as Header;
 import './view/home/Home.dart' as Home;
 import './view/category/Category.dart' as Category;
+import './view/rank/Rank.dart' as Rank;
 
 void main() => runApp(MyApp());
 
@@ -19,7 +20,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String activeNav = '分类';
+  String activeNav = '排行';
   // 修改NAV
   changeNavHandle(v) {
     setState(() {
@@ -33,6 +34,8 @@ class _MyHomePageState extends State<MyHomePage> {
       return Home.Home();
     } else if (activeNav == '分类') {
       return Category.Category();
+    } else if (activeNav == '排行') {
+      return Rank.Rank();
     }
     return Container();
   }
