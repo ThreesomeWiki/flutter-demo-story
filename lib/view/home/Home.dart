@@ -5,6 +5,7 @@ import './components/HomeRecommend.dart' as HomeRecommend;
 import './components/HomeManRead.dart' as HomeManRead;
 import './components/HomeWomanRead.dart' as HomeWomanRead;
 import './components/HomeWuxia.dart' as HomeWuxia;
+import './components/HomeYule.dart' as HomeYule;
 
 class Home extends StatefulWidget {
   @override
@@ -35,6 +36,7 @@ class _Home extends State<Home> {
         // HomeWomanRead.HomeWomanRead(),
         // 玄幻武侠
         HomeWuxia.HomeWuxia(),
+        HomeYule.HomeYule(),
       ],
     );
   }
