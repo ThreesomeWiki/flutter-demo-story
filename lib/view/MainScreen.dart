@@ -12,7 +12,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreen extends State<MainScreen> {
-  String activeNav = '排行';
+  String activeNav = '首页';
   // 修改NAV
   changeNavHandle(v) {
     setState(() {
