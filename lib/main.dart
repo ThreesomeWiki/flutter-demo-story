@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import './view/home/Home.dart' as Home;
 import './components/Navs.dart' as Navs;
 import './components/Header.dart' as Header;
+import './view/home/Home.dart' as Home;
+import './view/category/Category.dart' as Category;
 
 void main() => runApp(MyApp());
 
@@ -18,8 +19,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String activeNav = '首页';
-  changeHandle() {}
+  String activeNav = '分类';
+  // 修改NAV
+  changeNavHandle(v) {
+    setState(() {
+      activeNav = v;
+    });
+  }
+
+  // 渲染
+  render() {
+    if (activeNav == '首页') {
+      return Home.Home();
+    } else if (activeNav == '分类') {
+      return Category.Category();
+    }
+    return Container();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +47,6 @@ class _MyHomePageState extends State<MyHomePage> {
             elevation: 0,
             title: Header.Header(
               title: '纵横中文网',
-              onChange: changeHandle,
             )),
       ),
       body: SingleChildScrollView(
@@ -38,8 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Navs.Navs(
               activeNav: activeNav,
+              onChange: changeNavHandle,
             ),
-            Home.Home(),
+            render(),
           ],
         ),
       ),
