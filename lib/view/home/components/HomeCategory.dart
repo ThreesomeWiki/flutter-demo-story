@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Free.dart' as Free;
 
 class HomeCategory extends StatefulWidget {
   static String pageName = '分类';
@@ -23,27 +24,34 @@ class _HomeCategory extends State<HomeCategory> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Container(
-            width: 165,
-            height: 40,
-            decoration: BoxDecoration(
-              color: Color(0xff7297c1),
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Image.network(
-                  'http://familyweb.oss-cn-shanghai.aliyuncs.com/zongheng/icon/book-white.png',
-                  width: 25,
-                  height: 25,
-                ),
-                Text(
-                  '免费专区',
-                  style: TextStyle(color: Colors.white, fontSize: 12),
-                ),
-              ],
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Free.Free();
+              }));
+            },
+            child: Container(
+              width: 165,
+              height: 40,
+              decoration: BoxDecoration(
+                color: Color(0xff7297c1),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Image.network(
+                    'http://familyweb.oss-cn-shanghai.aliyuncs.com/zongheng/icon/book-white.png',
+                    width: 25,
+                    height: 25,
+                  ),
+                  Text(
+                    '免费专区',
+                    style: TextStyle(color: Colors.white, fontSize: 12),
+                  ),
+                ],
+              ),
             ),
           ),
           Container(

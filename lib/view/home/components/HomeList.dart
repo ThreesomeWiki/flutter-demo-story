@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class HomeList extends StatefulWidget {
   final Widget slotView; // 插入view
   final String title; // title
+  final Color titleColor;
   final bool sanjiao; // 是否是三角形
-  HomeList({this.slotView, this.title, this.sanjiao = false}) : super();
+  HomeList({this.slotView, this.title, this.sanjiao = false, this.titleColor})
+      : super();
   @override
   _HomeList createState() => _HomeList();
 }
@@ -34,11 +36,15 @@ class _HomeList extends State<HomeList> {
                     ),
               Text(
                 widget.title,
-                style: TextStyle(fontSize: 17, color: Color(0xff333333)),
+                style: TextStyle(
+                    fontSize: 17,
+                    color: widget.titleColor != null
+                        ? widget.titleColor
+                        : Color(0xff333333)),
               ),
             ],
           ),
-          widget.slotView,
+          widget.slotView == null ? Container() : widget.slotView,
         ],
       ),
     );
