@@ -14,10 +14,10 @@ flutter run
 
 -   Flutter: 代码生成一个 Render Tree。Flutter 直接把 Render Tree 通过渲染引擎生成界面。
 
-Flutter 渲染引擎和 Android ,Chrome OS 渲染引擎一致。
+> Flutter 渲染引擎和 Android ,Chrome OS 渲染引擎一致。
 
 ## Page
 
 <p>
-<image src='./md/home.jpeg' width=200/> <image src='./md/home-2.jpeg' width=200/> <image src='./md/home-3.jpeg' width=200/> <image src='./md/category.jpeg' width=200/> <image src='./md/rank.jpeg' width=200/>
+<image src='./md/home.jpeg' width=200/> <image src='./md/home-2.jpeg' width=200/> <image src='./md/home-3.jpeg' width=200/> <image src='./md/category.jpeg' width=200/> <image src='./md/rank.jpeg' width=200/> <image src='./md/book-detail.jpeg' width=200/> 
 </p>
