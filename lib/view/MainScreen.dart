@@ -4,6 +4,7 @@ import '../components/Header.dart' as Header;
 import './home/Home.dart' as Home;
 import './category/Category.dart' as Category;
 import './rank/Rank.dart' as Rank;
+import './shelf/Shelf.dart' as Shelf;
 
 class MainScreen extends StatefulWidget {
   static String pageName = '主页';
@@ -12,7 +13,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreen extends State<MainScreen> {
-  String activeNav = '首页';
+  String activeNav = '书架';
   // 修改NAV
   changeNavHandle(v) {
     setState(() {
@@ -28,6 +29,8 @@ class _MainScreen extends State<MainScreen> {
       return Category.Category();
     } else if (activeNav == '排行') {
       return Rank.Rank();
+    } else if (activeNav == '书架') {
+      return Shelf.Shelf();
     }
     return Container();
   }
